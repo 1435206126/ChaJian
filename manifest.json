@@ -1,0 +1,16 @@
+﻿{
+  "name": "Alt-Click Image Downloader",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "按住 Alt + 左键点击图片自动下载",
+  "permissions": ["downloads"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
